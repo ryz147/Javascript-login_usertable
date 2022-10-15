@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Sign Up Page</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" /> -->
+    <style>
+        body {
+            background-image: url(Javascript-Practice/background.jpeg);
+            height: 500px;
+            /* You must set a specified height */
+            background-position: center;
+            /* Center the image */
+            background-repeat: no-repeat;
+            /* Do not repeat the image */
+            background-size: cover;
+            /* Resize the background image to cover the entire container */
+        }
+
+        h2 {
+            font-size: 30px;
+        }
+
+        .SignUpPage {
+            display: inline-table;
+            border: 1px solid gray;
+            padding: 20px 15px 20px 15px;
+            width: 200px;
+            height: 60em;
+            border-radius: 4px;
+            background-color: #ffffff;
+            opacity: 0.8;
+            font-size: 10px;
+            margin-top: 5%;
+            margin-bottom: 5%;
+            margin-left: 60%;
+            /* margin-right: 40%; */
+        }
+
+        .signUp {
+            display: none
+        }
+
+        button {
+            background-color: rgb(50 138 235);
+            /* background-color: #2692e7bf; */
+            border-radius: 30px;
+            /* font-weight: bold; */
+            font-size: 18px;
+            padding: 10px 15px 10px 15px;
+            border: 1px solid white;
+            width: 210px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+            margin: 25px 100px 50px 100px;
+            height: 55px;
+
+        }
+
+        button:hover {
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        button:active {
+            opacity: 0.8;
+        }
+
+        input {
+            outline: none;
+        }
+
+        .search-bar3 {
+            border-style: double;
+            border-radius: 12px 0px;
+            border-width: 2px;
+            border-color: gray;
+            width: 25em;
+            font-style: normal;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15px;
+            padding: 10px;
+            outline: none;
+        }
+
+        P {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            margin-bottom: 3px;
+            color: #5a5858;
+        }
+
+        .disclamier {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            /* margin-bottom: 10px; */
+            margin-top: 40px;
+            color: gray;
+        }
+
+        table {
+            display: block;
+            margin-top: 20px;
+        }
+
+        th {
+            background-color: rgb(50 138 235);
+        }
+
+        td {
+            background-color: #ffffff;
+        }
+
+        td,
+        th {
+            border: 1px solid black;
+            padding: 5px;
+            color: black;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container" id="container1">
+        <div class="SignUpPage" id="signUpPage">
+            <h2> Sign Up</h2>
+            <p>Please enter the details to register </p>
+            <hr>
+            <div class="SignUpPage-container">
+                <p class="name">Name</p>
+                <input class="search-bar3" id="name" type="text" placeholder="Enter your name" required />
+                <p class="email-txt">Email</p>
+                <input class="search-bar3" id="email" type="text" placeholder="Enter email" required />
+                <p class="email-txt">User name</p>
+                <input class="search-bar3" id="uName" type="text" placeholder="Enter user name" required />
+                <p class="email-txt">Password</p>
+                <input class="search-bar3" id="pwd" type="password" placeholder="Create password" required />
+                <p class="disclamier"> By clicling Agree & Join, your agreeing to the Privacy policy. </p>
+
+                <button class="join-btn" onclick="createUser();">
+                    Agree & Join
+                </button>
+                <button class="join-btn" id="showUserTable" onclick="getUserTable()">
+                    Show Users
+                </button>
+
+            </div>
+        </div>
+        <div id="table-container" style="display: none;">
+            <div id="data-table"></div>
+            <button class="ShowSignUp" id="showSignUp" onclick="getUserTable()">
+                Sign Up
+            </button>
+        </div>
+    </div>
+
+    <script src="Javascript-Practice/userdetails.js"></script>
+
+</body>
+
+</html>
